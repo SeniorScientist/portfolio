@@ -19,17 +19,21 @@ export default function Skills() {
       items: [
         { name: 'Python', note: 'AI連携・API開発' },
         { name: 'Go', note: 'サーバーサイド実装' },
+        { name: 'Ruby on Rails', note: 'Webアプリケーション開発' },
+        { name: 'PHP', note: 'バックエンド開発' },
         { name: 'Elasticsearch', note: '検索ロジック・分析' }
       ],
       color: 'bg-emerald-600',
       textColor: 'text-emerald-600'
     },
     {
-      level: '3. 触ったことがある',
-      desc: 'PoC・検証レベルで使用経験あり',
+      level: '3. 基礎実務・即キャッチアップ可能',
+      desc: '短期間で実務レベルに到達できる',
       items: [
         { name: 'GraphQL / Prisma', note: '基本的なCRUD・スキーマ設計' },
-        { name: 'LLM Agents', note: 'PoC・設計検討段階' }
+        { name: 'Vercel AI SDK / OpenAI Agents SDK', note: 'AIアプリケーション開発' },
+        { name: 'LangChain / OpenAI API / Vertex AI', note: 'LLM統合・エージェント設計' },
+        { name: 'Pinecone / PGVector', note: 'RAG用ベクトルDB構築' }
       ],
       color: 'bg-slate-500',
       textColor: 'text-slate-500'

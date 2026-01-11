@@ -57,7 +57,7 @@ export default function DetailedProfile() {
               <div className="flex flex-col md:flex-row md:items-center">
                 <span className="w-32 font-bold text-slate-700 flex-shrink-0">Backend</span>
                 <div className="flex-grow flex flex-wrap gap-2">
-                  {['Go', 'Python', 'Node.js', 'TypeScript', 'GraphQL', 'REST API', 'gRPC'].map(tag => (
+                  {['Go', 'Python', 'Node.js', 'TypeScript', 'Ruby on Rails', 'PHP', 'Java', 'GraphQL', 'REST API', 'gRPC'].map(tag => (
                     <span key={tag} className="px-3 py-1 bg-slate-100 text-slate-700 rounded text-sm font-medium">{tag}</span>
                   ))}
                 </div>
@@ -65,7 +65,7 @@ export default function DetailedProfile() {
               <div className="flex flex-col md:flex-row md:items-center">
                 <span className="w-32 font-bold text-slate-700 flex-shrink-0">Infra / Cloud</span>
                 <div className="flex-grow flex flex-wrap gap-2">
-                  {['AWS', 'Terraform', 'CDK', 'Docker', 'Elasticsearch', 'CI/CD (GitHub Actions)'].map(tag => (
+                  {['AWS', 'GCP', 'Azure', 'Terraform', 'CDK', 'Docker', 'Firebase', 'Supabase', 'Elasticsearch', 'CI/CD (GitHub Actions)'].map(tag => (
                     <span key={tag} className="px-3 py-1 bg-slate-100 text-slate-700 rounded text-sm font-medium">{tag}</span>
                   ))}
                 </div>
@@ -73,7 +73,7 @@ export default function DetailedProfile() {
               <div className="flex flex-col md:flex-row md:items-center">
                 <span className="w-32 font-bold text-slate-700 flex-shrink-0">Frontend</span>
                 <div className="flex-grow flex flex-wrap gap-2">
-                  {['React', 'Next.js', 'TypeScript', 'Tailwind CSS'].map(tag => (
+                  {['React', 'Next.js', 'Vue', 'Nuxt.js', 'TypeScript', 'Tailwind CSS', 'MUI'].map(tag => (
                     <span key={tag} className="px-3 py-1 bg-slate-100 text-slate-700 rounded text-sm font-medium">{tag}</span>
                   ))}
                 </div>

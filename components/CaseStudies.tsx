@@ -1,4 +1,4 @@
-import { FolderOpen, ExternalLink, Check, Lightbulb } from 'lucide-react'
+import { FolderOpen, ExternalLink, Check, Lightbulb, Calendar } from 'lucide-react'
 
 export default function CaseStudies() {
   const projects = [
@@ -6,6 +6,7 @@ export default function CaseStudies() {
       title: 'KAKUKAKU',
       role: 'リードエンジニア',
       tag: 'AIプラットフォーム',
+      period: '2023年12月 〜 2025年11月',
       userValue: '対話型AIで、ユーザーが素早く必要な情報を引き出せるサービス',
       details: {
         background: '対話型AIサービスの新規立ち上げ。\nPoCから商用化を目指すフェーズ。',
@@ -13,7 +14,7 @@ export default function CaseStudies() {
           'AIの回答精度が低く、ユーザー満足度が上がらない',
           '運用コスト（トークン課金）の肥大化懸念'
         ],
-        responsibilities: ['技術選定', '設計', '実装', 'デプロイ', '監視・運用改善'],
+        responsibilities: ['プロダクト設計', '技術選定', 'インフラ設計・構築', '実装', 'デプロイ', '監視・運用改善'],
         solution: [
           '意味検索とキーワード検索の組み合わせで、検索精度を約30%向上',
           'サーバレス構成で、待機コストをほぼゼロに削減',
@@ -31,6 +32,7 @@ export default function CaseStudies() {
       title: 'YTGATE',
       role: 'インフラ担当',
       tag: '決済基盤セキュリティ',
+      period: '2021年3月 〜 2023年11月',
       userValue: 'クレジットカード決済を安全に処理する決済代行サービス',
       details: {
         background: '決済代行サービスのインフラ刷新。\nセキュリティ基準厳格化への対応。',
@@ -38,7 +40,7 @@ export default function CaseStudies() {
           'PCI DSS要件（カード業界のセキュリティ基準）への未対応',
           '手動運用によるオペレーションミスのリスク'
         ],
-        responsibilities: ['インフラ設計', '構築', 'セキュリティ実装', 'ドキュメント化'],
+        responsibilities: ['インフラ設計', '構築', 'バックエンド開発', '決済システム連携', 'セキュリティ実装', 'ドキュメント化'],
         solution: [
           'インフラを完全コード化し、環境構築時間を数日→数時間に短縮',
           '不正アクセス防止と脆弱性検知の自動化を導入',
@@ -56,6 +58,7 @@ export default function CaseStudies() {
       title: 'Mazrica (Senses)',
       role: 'フルスタック',
       tag: 'SaaS改善・拡張',
+      period: '2019年1月 〜 2021年2月',
       userValue: '営業チームの案件管理を効率化するSFA（営業支援）ツール',
       details: {
         background: '成長中のSaaSにおける機能拡張と技術的負債の解消。',
@@ -63,13 +66,13 @@ export default function CaseStudies() {
           'API複雑化による開発スピード低下',
           '画面表示の遅延によるUX悪化'
         ],
-        responsibilities: ['API設計・実装', 'フロントエンド最適化', 'AI機能統合', 'パフォーマンス改善'],
+        responsibilities: ['API設計・実装', 'フロントエンド最適化', 'インフラ保守（AWS CDK）', 'パフォーマンス改善'],
         solution: [
           '必要なデータだけを取得する仕組みで、通信量を約40%削減',
           '画面描画を最適化し、表示速度を約2倍に改善',
-          'AI機能と既存システムをスムーズに連携するAPI設計'
+          'AWS CDKでインフラをコード管理し、運用効率を向上'
         ],
-        metrics: ['通信量 約40%削減', '表示速度 約2倍', 'AI機能の安定統合'],
+        metrics: ['通信量 約40%削減', '表示速度 約2倍', 'インフラ運用の効率化'],
         result: '画面表示速度が向上。\nユーザー体感ストレスを軽減。',
         learning: '稼働中プロダクトにおける、安全かつ段階的な改善手法。',
         usefulFor: 'SaaS開発、API設計、パフォーマンス改善、スケール対応に活かせます。'
@@ -110,7 +113,13 @@ export default function CaseStudies() {
                 </span>
               </div>
               <p className="text-slate-600 text-sm mb-3">{proj.userValue}</p>
-              <p className="text-slate-500 text-sm font-medium mb-2">{proj.role}</p>
+              <div className="flex flex-wrap items-center gap-3 mb-2">
+                <p className="text-slate-500 text-sm font-medium">{proj.role}</p>
+                <span className="flex items-center text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded">
+                  <Calendar className="w-3 h-3 mr-1" />
+                  {proj.period}
+                </span>
+              </div>
               
               {/* Responsibility Breakdown */}
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
