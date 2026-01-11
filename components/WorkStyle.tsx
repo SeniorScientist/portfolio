@@ -1,4 +1,4 @@
-import { Briefcase, Handshake, Target, Clock, AlertTriangle, TestTube, Shield } from 'lucide-react'
+import { Briefcase, Handshake, Target, Clock, AlertTriangle, TestTube, Shield, MessageSquare } from 'lucide-react'
 
 export default function WorkStyle() {
   const values = [
@@ -6,32 +6,39 @@ export default function WorkStyle() {
       icon: Target,
       title: '目的の共有',
       shortDesc: '最初にゴールを合わせてズレを防ぐ',
-      desc: '「何のために、どこまでやるか」を最初に握ります。認識のズレを防ぎ、無駄な手戻りをなくします。'
+      desc: '「何のために、どこまでやるか」を最初に握ります。\n認識のズレを防ぎ、無駄な手戻りをなくします。'
     },
     {
       icon: Clock,
       title: '短いスパンで進捗',
       shortDesc: '2〜3日で報告、価値を早く示す',
-      desc: '1週間待たせるのではなく、2〜3日で現状を見せます。早い段階でのフィードバックを歓迎します。'
+      desc: '1週間待たせません。\n2〜3日で現状を見せます。\n早い段階でのフィードバックを歓迎します。'
     },
     {
       icon: AlertTriangle,
       title: 'リスクの早期報告',
       shortDesc: '悪い情報ほど早く共有',
-      desc: '「間に合わないかも」「技術的に難しい」といった悪い情報ほど、隠さずに早く伝えて相談します。'
+      desc: '「間に合わないかも」「技術的に難しい」\nそういった悪い情報ほど、隠さずに早く伝えて相談します。'
     },
     {
       icon: TestTube,
       title: 'テストと監視の初期設計',
       shortDesc: '作る前に運用を考える',
-      desc: '作る前に「どうテストするか」「どう監視するか」を考えます。リリース後の運用負荷を下げます。'
+      desc: '作る前に考えます。\n「どうテストするか」「どう監視するか」\nリリース後の運用負荷を下げます。'
     },
     {
       icon: Shield,
       title: '運用までの責任',
       shortDesc: '安定稼働まで見届ける',
-      desc: '作って終わりではありません。ユーザーが使い始め、安定稼働するまでを自分の仕事として責任を持ちます。'
+      desc: '作って終わりではありません。\nユーザーが使い始め、安定稼働するまでを自分の仕事として責任を持ちます。'
     }
+  ]
+
+  const communicationDetails = [
+    '毎週必ず進捗＋課題を共有',
+    '障害発生時の即応手順を明確化',
+    '変更時は影響範囲を事前説明',
+    'ドキュメントは常に最新化'
   ]
 
   return (
@@ -49,7 +56,7 @@ export default function WorkStyle() {
       {/* Summary Box for Quick Scan - CEO/CTO向け */}
       <div className="bg-slate-900 text-white rounded-xl p-6 mb-8">
         <h3 className="font-bold text-lg mb-4 text-blue-400">■ 私の仕事の進め方（まとめ）</h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
           {values.map((val, idx) => {
             const Icon = val.icon
             return (
@@ -59,6 +66,22 @@ export default function WorkStyle() {
               </div>
             )
           })}
+        </div>
+        
+        {/* Communication Details */}
+        <div className="border-t border-slate-700 pt-4">
+          <div className="flex items-center mb-3">
+            <MessageSquare className="w-4 h-4 text-emerald-400 mr-2" />
+            <span className="text-sm font-bold text-emerald-400">コミュニケーションの具体例</span>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-2">
+            {communicationDetails.map((detail, idx) => (
+              <div key={idx} className="flex items-center text-sm text-slate-300">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>
+                {detail}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -76,7 +99,7 @@ export default function WorkStyle() {
                   <p className="text-xs text-[var(--accent-color)] font-medium">{val.shortDesc}</p>
                 </div>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed mt-3">
+              <p className="text-slate-600 text-sm leading-relaxed mt-3 whitespace-pre-line">
                 {val.desc}
               </p>
             </div>

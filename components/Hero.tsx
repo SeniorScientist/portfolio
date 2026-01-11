@@ -17,8 +17,8 @@ export default function Hero() {
           </div>
 
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-relaxed">
-            生成AIを本番運用まで落とし込み、<br />
-            安定サービスをつくるエンジニアです。<br />
+            生成AIをPoCで終わらせず、<br />
+            本番運用まで確実に実装・安定化できるエンジニアです。<br />
             <span className="text-blue-400 text-xl md:text-2xl mt-4 block font-medium">
               AIプラットフォーム、SaaS開発、<br className="md:hidden" />PCI DSS対応の実務経験があります。
             </span>

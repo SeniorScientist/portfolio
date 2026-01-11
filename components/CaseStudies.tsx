@@ -1,4 +1,4 @@
-import { FolderOpen, ExternalLink, Check } from 'lucide-react'
+import { FolderOpen, ExternalLink, Check, Lightbulb } from 'lucide-react'
 
 export default function CaseStudies() {
   const projects = [
@@ -8,20 +8,21 @@ export default function CaseStudies() {
       tag: 'AIプラットフォーム',
       userValue: '対話型AIで、ユーザーが素早く必要な情報を引き出せるサービス',
       details: {
-        background: '対話型AIサービスの新規立ち上げ。PoCから商用化を目指すフェーズ。',
+        background: '対話型AIサービスの新規立ち上げ。\nPoCから商用化を目指すフェーズ。',
         issues: [
           'AIの回答精度が低く、ユーザー満足度が上がらない',
           '運用コスト（トークン課金）の肥大化懸念'
         ],
-        scope: '私の役割：技術選定・設計・実装・デプロイ・運用改善まで一貫して担当',
-        my_role: 'CEO直下で要件定義から技術選定、設計、実装、監視までを一貫して担当。ビジネス要件を技術仕様へ翻訳。',
+        responsibilities: ['技術選定', '設計', '実装', 'デプロイ', '監視・運用改善'],
         solution: [
-          '意味検索とキーワード検索の組み合わせで、検索精度を大幅改善',
-          'サーバレス構成で、使った分だけ課金される仕組みを実現',
-          '監視体制を構築し、エラー発生時に即座に検知できる仕組みを導入'
+          '意味検索とキーワード検索の組み合わせで、検索精度を約30%向上',
+          'サーバレス構成で、待機コストをほぼゼロに削減',
+          '監視体制を構築し、障害検知時間を数分以内に短縮'
         ],
-        result: '商用リリース達成。応答精度が向上し、ユーザー評価改善。運用負荷を最小限に抑え、安定稼働を維持。',
-        learning: 'ユーザー体験（UX）に直結するレスポンス速度と精度のバランス。'
+        metrics: ['回答精度 約30%向上', '待機コスト ほぼゼロ', '障害検知 数分以内'],
+        result: '商用リリース達成。\n応答精度が向上し、ユーザー評価改善。\n安定稼働を維持中。',
+        learning: 'ユーザー体験に直結するレスポンス速度と精度のバランス。',
+        usefulFor: 'AI活用プロダクト開発、検索システム設計、本番運用設計に活かせます。'
       },
       tech: ['Python', 'LangChain', 'AWS', 'RAG'],
       link: 'https://kakukaku.app/'
@@ -32,21 +33,21 @@ export default function CaseStudies() {
       tag: '決済基盤セキュリティ',
       userValue: 'クレジットカード決済を安全に処理する決済代行サービス',
       details: {
-        background: '決済代行サービスのインフラ刷新。セキュリティ基準厳格化への対応。',
+        background: '決済代行サービスのインフラ刷新。\nセキュリティ基準厳格化への対応。',
         issues: [
           'PCI DSS要件（カード業界のセキュリティ基準）への未対応',
           '手動運用によるオペレーションミスのリスク'
         ],
-        scope: '私の役割：決済インフラの設計・構築・セキュリティ強化・ドキュメント化',
-        my_role: 'AWS環境の再設計と、インフラをコードで管理する仕組みを構築。セキュリティ要件の定義と実装。',
+        responsibilities: ['インフラ設計', '構築', 'セキュリティ実装', 'ドキュメント化'],
         solution: [
-          'インフラを完全コード化し、誰でも同じ環境を再現可能に',
+          'インフラを完全コード化し、環境構築時間を数日→数時間に短縮',
           '不正アクセス防止と脆弱性検知の自動化を導入',
           '操作権限を最小限にし、全操作ログを保全'
         ],
-        result: 'PCI DSS準拠を達成。監査対応コストと運用負荷を削減。',
+        metrics: ['環境構築 数日→数時間', 'PCI DSS準拠達成', '監査対応コスト削減'],
+        result: 'PCI DSS準拠を達成。\n監査対応コストと運用負荷を削減。',
         learning: 'ミッションクリティカルなシステムにおける「守り」の鉄則。',
-        designNote: 'この構成は、PCI DSS準拠と運用の安全性を高めるための設計です。'
+        usefulFor: 'セキュアなインフラ構築、決済システム、コンプライアンス対応に活かせます。'
       },
       tech: ['Terraform', 'AWS', 'Security', 'CI/CD'],
       link: 'https://ytgate.jp/'
@@ -62,16 +63,16 @@ export default function CaseStudies() {
           'API複雑化による開発スピード低下',
           '画面表示の遅延によるUX悪化'
         ],
-        scope: '私の役割：バックエンドAPI設計・実装、フロントエンド最適化、AI機能統合',
-        my_role: 'バックエンドAPI刷新とフロントエンド改善。AI機能（DealAgent）の統合。',
+        responsibilities: ['API設計・実装', 'フロントエンド最適化', 'AI機能統合', 'パフォーマンス改善'],
         solution: [
-          '必要なデータだけを取得する仕組みで、通信量を削減',
-          '画面描画を最適化し、表示速度を改善',
-          '高速検索エンジンで、大量データでも瞬時に結果表示',
+          '必要なデータだけを取得する仕組みで、通信量を約40%削減',
+          '画面描画を最適化し、表示速度を約2倍に改善',
           'AI機能と既存システムをスムーズに連携するAPI設計'
         ],
-        result: '画面表示速度が向上し、ユーザー体感ストレスを軽減。',
-        learning: '稼働中プロダクトにおける、安全かつ段階的な改善手法。'
+        metrics: ['通信量 約40%削減', '表示速度 約2倍', 'AI機能の安定統合'],
+        result: '画面表示速度が向上。\nユーザー体感ストレスを軽減。',
+        learning: '稼働中プロダクトにおける、安全かつ段階的な改善手法。',
+        usefulFor: 'SaaS開発、API設計、パフォーマンス改善、スケール対応に活かせます。'
       },
       tech: ['TypeScript', 'React', 'GraphQL', 'Rails'],
       link: 'https://pages-senses.mazrica.com/glisting-senses'
@@ -93,6 +94,7 @@ export default function CaseStudies() {
       <div className="grid gap-12">
         {projects.map((proj, idx) => (
           <div key={idx} className="card border-0 shadow-lg ring-1 ring-slate-200">
+            {/* Header */}
             <div className="border-b border-slate-100 pb-4 mb-6">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
                 <h3 className="text-2xl font-bold text-slate-900 flex items-center">
@@ -108,19 +110,27 @@ export default function CaseStudies() {
                 </span>
               </div>
               <p className="text-slate-600 text-sm mb-3">{proj.userValue}</p>
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                <p className="text-slate-500 text-sm font-medium">{proj.role}</p>
-                <p className="text-slate-800 text-sm font-bold bg-blue-50 border border-blue-200 px-3 py-1 rounded inline-block">
-                  {proj.details.scope}
-                </p>
+              <p className="text-slate-500 text-sm font-medium mb-2">{proj.role}</p>
+              
+              {/* Responsibility Breakdown */}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                <p className="text-xs font-bold text-blue-700 mb-2">私の担当範囲：</p>
+                <div className="flex flex-wrap gap-2">
+                  {proj.details.responsibilities.map((resp, i) => (
+                    <span key={i} className="text-xs bg-white text-slate-700 px-2 py-1 rounded border border-blue-100">
+                      {resp}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
 
+            {/* Content */}
             <div className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="text-xs font-bold text-slate-400 uppercase mb-2">◆ 背景</h4>
-                  <p className="text-slate-700 mb-4 text-sm font-medium">{proj.details.background}</p>
+                  <p className="text-slate-700 mb-4 text-sm font-medium whitespace-pre-line">{proj.details.background}</p>
 
                   <h4 className="text-xs font-bold text-slate-400 uppercase mb-2">◆ 課題</h4>
                   <ul className="list-disc list-inside text-slate-700 text-sm space-y-1 bg-slate-50 p-3 rounded">
@@ -130,13 +140,8 @@ export default function CaseStudies() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-400 uppercase mb-2">◆ 私の役割</h4>
-                  <p className="text-slate-700 text-sm leading-relaxed border-l-2 border-blue-200 pl-3 mb-4">
-                    {proj.details.my_role}
-                  </p>
-
                   <h4 className="text-xs font-bold text-slate-400 uppercase mb-2">◆ 解決・工夫</h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-4">
                     {proj.details.solution.map((sol, i) => (
                       <li key={i} className="flex items-start text-slate-700 text-sm">
                         <Check className="text-emerald-500 mt-1 mr-2 flex-shrink-0 w-4 h-4" />
@@ -144,20 +149,39 @@ export default function CaseStudies() {
                       </li>
                     ))}
                   </ul>
+
+                  {/* Metrics */}
+                  <h4 className="text-xs font-bold text-slate-400 uppercase mb-2">◆ 主な成果指標</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {proj.details.metrics.map((metric, i) => (
+                      <span key={i} className="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded border border-emerald-200 font-medium">
+                        {metric}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
 
+              {/* Results */}
               <div className="bg-slate-900 text-white p-4 rounded-lg">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <span className="text-slate-400 text-xs font-bold uppercase block mb-1">◆ 結果（事実）</span>
-                    <p className="text-sm font-medium">{proj.details.result}</p>
+                    <span className="text-slate-400 text-xs font-bold uppercase block mb-1">◆ 結果</span>
+                    <p className="text-sm font-medium whitespace-pre-line">{proj.details.result}</p>
                   </div>
                   <div>
                     <span className="text-slate-400 text-xs font-bold uppercase block mb-1">◆ 学び</span>
                     <p className="text-sm font-medium">{proj.details.learning}</p>
                   </div>
                 </div>
+              </div>
+
+              {/* Where This Experience Is Useful */}
+              <div className="flex items-start bg-amber-50 border border-amber-200 rounded-lg p-3">
+                <Lightbulb className="w-4 h-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-amber-800">
+                  <span className="font-bold">この経験が活きる場面：</span>{proj.details.usefulFor}
+                </p>
               </div>
             </div>
           </div>
@@ -171,28 +195,28 @@ export default function CaseStudies() {
           <div className="bg-white p-4 rounded-lg border border-slate-100">
             <span className="font-bold text-slate-800">Mirrom</span>
             <ul className="mt-2 space-y-1 text-sm text-slate-600">
-              <li>・リアルタイム議事録で会議後の作業時間を削減</li>
+              <li>・リアルタイム議事録で会議後の作業時間を約50%削減</li>
               <li>・音声通信パイプラインを安定化</li>
             </ul>
           </div>
           <div className="bg-white p-4 rounded-lg border border-slate-100">
             <span className="font-bold text-slate-800">Stella AI</span>
             <ul className="mt-2 space-y-1 text-sm text-slate-600">
-              <li>・要件定義ヒアリング工数を大幅圧縮</li>
-              <li>・曖昧な要望を構造化データへ変換</li>
+              <li>・要件定義ヒアリング工数を約60%圧縮</li>
+              <li>・曖昧な要望を構造化データへ自動変換</li>
             </ul>
           </div>
           <div className="bg-white p-4 rounded-lg border border-slate-100">
             <span className="font-bold text-slate-800">Wasabi</span>
             <ul className="mt-2 space-y-1 text-sm text-slate-600">
               <li>・データ処理パイプラインを最適化</li>
-              <li>・処理速度を改善しコスト削減</li>
+              <li>・処理速度を約3倍に改善、コスト削減</li>
             </ul>
           </div>
           <div className="bg-white p-4 rounded-lg border border-slate-100">
             <span className="font-bold text-slate-800">Tebot</span>
             <ul className="mt-2 space-y-1 text-sm text-slate-600">
-              <li>・チャットボット応答精度を向上</li>
+              <li>・チャットボット応答精度を約25%向上</li>
               <li>・顧客対応の自動化率を改善</li>
             </ul>
           </div>

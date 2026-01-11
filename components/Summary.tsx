@@ -1,6 +1,12 @@
-import { FileText } from 'lucide-react'
+import { FileText, Check } from 'lucide-react'
 
 export default function Summary() {
+  const mainAchievements = [
+    '生成AI × 業務システムで、本番運用に成功',
+    '堅牢なAWSインフラ設計（PCI DSS準拠）',
+    'プロダクトの安定運用と継続改善'
+  ]
+
   return (
     <section id="summary" className="section-container">
       <div className="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden">
@@ -19,11 +25,24 @@ export default function Summary() {
           <div>
             <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 border-b border-slate-100 pb-1">■ 私は何ができるか</h3>
             <p className="text-xl font-bold text-slate-900 leading-relaxed mb-2">
-              生成AIを本番運用まで落とし込み、安定サービスをつくるエンジニアです。
+              生成AIをPoCで終わらせず、本番運用まで確実に実装・安定化できるエンジニアです。
             </p>
             <p className="text-slate-700">
               AWSインフラとセキュリティ設計（PCI DSS準拠）も対応できます。
             </p>
+          </div>
+
+          {/* Main Achievements - Running Value */}
+          <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5">
+            <h3 className="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-3">◆ 主な成果（3つ）</h3>
+            <ul className="space-y-2">
+              {mainAchievements.map((achievement, idx) => (
+                <li key={idx} className="flex items-center">
+                  <Check className="w-5 h-5 text-emerald-600 mr-2 flex-shrink-0" />
+                  <span className="text-slate-800 font-medium">{achievement}</span>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
