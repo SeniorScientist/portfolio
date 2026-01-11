@@ -16,9 +16,9 @@ export default function CaseStudies() {
         scope: '私の役割：技術選定・設計・実装・デプロイ・運用改善まで一貫して担当',
         my_role: 'CEO直下で要件定義から技術選定、設計、実装、監視までを一貫して担当。ビジネス要件を技術仕様へ翻訳。',
         solution: [
-          'RAG基盤にHybrid Search（キーワード＋意味検索の組み合わせ）を導入し、検索精度を大幅改善',
-          'AWS Lambda（サーバレス）採用で、待機コストを極小化',
-          'New Relic等での監視体制構築により、エラー即知を実現'
+          '意味検索とキーワード検索の組み合わせで、検索精度を大幅改善',
+          'サーバレス構成で、使った分だけ課金される仕組みを実現',
+          '監視体制を構築し、エラー発生時に即座に検知できる仕組みを導入'
         ],
         result: '商用リリース達成。応答精度が向上し、ユーザー評価改善。運用負荷を最小限に抑え、安定稼働を維持。',
         learning: 'ユーザー体験（UX）に直結するレスポンス速度と精度のバランス。'
@@ -38,11 +38,11 @@ export default function CaseStudies() {
           '手動運用によるオペレーションミスのリスク'
         ],
         scope: '私の役割：決済インフラの設計・構築・セキュリティ強化・ドキュメント化',
-        my_role: 'AWS環境の再設計とTerraform化（インフラをコードで管理）。セキュリティ要件の定義と実装。',
+        my_role: 'AWS環境の再設計と、インフラをコードで管理する仕組みを構築。セキュリティ要件の定義と実装。',
         solution: [
-          'インフラを完全コード化し、構成管理を厳格化',
-          'WAF/IPS導入と脆弱性検知パイプラインの構築',
-          'IAM権限の最小化と操作ログの完全保全'
+          'インフラを完全コード化し、誰でも同じ環境を再現可能に',
+          '不正アクセス防止と脆弱性検知の自動化を導入',
+          '操作権限を最小限にし、全操作ログを保全'
         ],
         result: 'PCI DSS準拠を達成。監査対応コストと運用負荷を削減。',
         learning: 'ミッションクリティカルなシステムにおける「守り」の鉄則。',
@@ -65,10 +65,10 @@ export default function CaseStudies() {
         scope: '私の役割：バックエンドAPI設計・実装、フロントエンド最適化、AI機能統合',
         my_role: 'バックエンドAPI刷新とフロントエンド改善。AI機能（DealAgent）の統合。',
         solution: [
-          'GraphQL導入で必要なデータだけを取得し、通信量を削減（API効率化）',
-          'Reactレンダリング最適化で表示速度改善',
-          'Elasticsearchで高速な検索パフォーマンスを実現',
-          'AI推論結果をスムーズに連携するAPI設計'
+          '必要なデータだけを取得する仕組みで、通信量を削減',
+          '画面描画を最適化し、表示速度を改善',
+          '高速検索エンジンで、大量データでも瞬時に結果表示',
+          'AI機能と既存システムをスムーズに連携するAPI設計'
         ],
         result: '画面表示速度が向上し、ユーザー体感ストレスを軽減。',
         learning: '稼働中プロダクトにおける、安全かつ段階的な改善手法。'
@@ -164,8 +164,39 @@ export default function CaseStudies() {
         ))}
       </div>
 
-      <div className="mt-8 text-center text-sm text-slate-500">
-        その他実績：Mirrom, Wasabi, Stella AI, Tebot 等
+      {/* Other Projects */}
+      <div className="mt-12 bg-slate-50 rounded-xl p-6 border border-slate-200">
+        <h3 className="font-bold text-slate-800 mb-4">その他の実績</h3>
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="bg-white p-4 rounded-lg border border-slate-100">
+            <span className="font-bold text-slate-800">Mirrom</span>
+            <ul className="mt-2 space-y-1 text-sm text-slate-600">
+              <li>・リアルタイム議事録で会議後の作業時間を削減</li>
+              <li>・音声通信パイプラインを安定化</li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg border border-slate-100">
+            <span className="font-bold text-slate-800">Stella AI</span>
+            <ul className="mt-2 space-y-1 text-sm text-slate-600">
+              <li>・要件定義ヒアリング工数を大幅圧縮</li>
+              <li>・曖昧な要望を構造化データへ変換</li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg border border-slate-100">
+            <span className="font-bold text-slate-800">Wasabi</span>
+            <ul className="mt-2 space-y-1 text-sm text-slate-600">
+              <li>・データ処理パイプラインを最適化</li>
+              <li>・処理速度を改善しコスト削減</li>
+            </ul>
+          </div>
+          <div className="bg-white p-4 rounded-lg border border-slate-100">
+            <span className="font-bold text-slate-800">Tebot</span>
+            <ul className="mt-2 space-y-1 text-sm text-slate-600">
+              <li>・チャットボット応答精度を向上</li>
+              <li>・顧客対応の自動化率を改善</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   )

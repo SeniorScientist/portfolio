@@ -59,10 +59,24 @@ export default function Summary() {
             <div>
               <div className="mb-6">
                 <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 border-b border-slate-100 pb-1">■ 向いている課題</h3>
-                <p className="text-slate-800 font-medium">
-                  AI活用、セキュアな決済/インフラ構築、<br />
-                  新規プロダクトの0→1立ち上げ
-                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-slate-800 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
+                    AI活用・検索精度の改善
+                  </li>
+                  <li className="flex items-center text-slate-800 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
+                    セキュアな決済/インフラ構築
+                  </li>
+                  <li className="flex items-center text-slate-800 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
+                    新規プロダクトの0→1立ち上げ
+                  </li>
+                  <li className="flex items-center text-slate-800 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
+                    API設計・スケール対応
+                  </li>
+                </ul>
               </div>
               <div>
                 <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 border-b border-slate-100 pb-1">■ 働き方</h3>

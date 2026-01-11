@@ -4,37 +4,34 @@ export default function WorkStyle() {
   const values = [
     {
       icon: Target,
-      title: '目的とゴールの共有',
-      desc: '最初に「何のために、どこまでやるか」を握ります。認識のズレを防ぎ、無駄な手戻りをなくします。'
+      title: '目的の共有',
+      shortDesc: '最初にゴールを合わせてズレを防ぐ',
+      desc: '「何のために、どこまでやるか」を最初に握ります。認識のズレを防ぎ、無駄な手戻りをなくします。'
     },
     {
       icon: Clock,
-      title: '短いスパンでの進捗共有',
+      title: '短いスパンで進捗',
+      shortDesc: '2〜3日で報告、価値を早く示す',
       desc: '1週間待たせるのではなく、2〜3日で現状を見せます。早い段階でのフィードバックを歓迎します。'
     },
     {
       icon: AlertTriangle,
       title: 'リスクの早期報告',
+      shortDesc: '悪い情報ほど早く共有',
       desc: '「間に合わないかも」「技術的に難しい」といった悪い情報ほど、隠さずに早く伝えて相談します。'
     },
     {
       icon: TestTube,
       title: 'テストと監視の初期設計',
+      shortDesc: '作る前に運用を考える',
       desc: '作る前に「どうテストするか」「どう監視するか」を考えます。リリース後の運用負荷を下げます。'
     },
     {
       icon: Shield,
       title: '運用までの責任',
+      shortDesc: '安定稼働まで見届ける',
       desc: '作って終わりではありません。ユーザーが使い始め、安定稼働するまでを自分の仕事として責任を持ちます。'
     }
-  ]
-
-  const summary = [
-    '目的を最初にすり合わせる',
-    '短い期間で進捗共有',
-    '問題は早めに共有・対応',
-    '品質と運用設計を両立',
-    '最後まで責任を持つ'
   ]
 
   return (
@@ -49,42 +46,52 @@ export default function WorkStyle() {
         <p className="text-slate-600">日本のチームで働く上で、徹底していること</p>
       </div>
 
-      {/* Summary Box for Quick Scan */}
+      {/* Summary Box for Quick Scan - CEO/CTO向け */}
       <div className="bg-slate-900 text-white rounded-xl p-6 mb-8">
         <h3 className="font-bold text-lg mb-4 text-blue-400">■ 私の仕事の進め方（まとめ）</h3>
-        <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-          {summary.map((item, idx) => (
-            <li key={idx} className="flex items-center text-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mr-2 flex-shrink-0"></span>
-              {item}
-            </li>
-          ))}
-        </ul>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {values.map((val, idx) => {
+            const Icon = val.icon
+            return (
+              <div key={idx} className="flex items-center">
+                <Icon className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                <span className="text-sm">{val.shortDesc}</span>
+              </div>
+            )
+          })}
+        </div>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {values.map((val, idx) => {
           const Icon = val.icon
           return (
-            <div key={idx} className="card bg-white hover:shadow-md transition-shadow border-t-4 border-t-slate-200 hover:border-t-[var(--accent-color)]">
-              <div className="flex items-center mb-3">
-                <Icon className="w-5 h-5 text-[var(--accent-color)] mr-2" />
-                <h3 className="font-bold text-lg text-slate-800">{val.title}</h3>
+            <div key={idx} className="card bg-white hover:shadow-md transition-shadow border-l-4 border-l-[var(--accent-color)]">
+              <div className="flex items-center mb-2">
+                <div className="bg-blue-50 p-2 rounded mr-3">
+                  <Icon className="w-5 h-5 text-[var(--accent-color)]" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-800">■ {val.title}</h3>
+                  <p className="text-xs text-[var(--accent-color)] font-medium">{val.shortDesc}</p>
+                </div>
               </div>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <p className="text-slate-600 text-sm leading-relaxed mt-3">
                 {val.desc}
               </p>
             </div>
           )
         })}
 
-        <div className="card bg-slate-50 flex items-center justify-center text-center p-6">
+        <div className="card bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center text-center p-6 border-l-4 border-l-slate-300">
           <div>
-            <Handshake className="text-slate-400 w-8 h-8 mx-auto mb-2" />
-            <p className="text-sm text-slate-600 font-medium">
+            <div className="bg-white p-3 rounded-full inline-block mb-3 shadow-sm">
+              <Handshake className="text-slate-500 w-8 h-8" />
+            </div>
+            <p className="text-sm text-slate-700 font-medium">
               安心感を持って<br />
               任せていただけるよう、<br />
-              丁寧な対話を心がけています。
+              <span className="text-[var(--accent-color)]">丁寧な対話</span>を心がけています。
             </p>
           </div>
         </div>
