@@ -7,6 +7,7 @@ export default function CaseStudies() {
       role: 'リードエンジニア',
       tag: 'AIプラットフォーム',
       period: '2023年12月 〜 2025年11月',
+      contractType: '業務委託',
       userValue: '対話型AIで、ユーザーが素早く必要な情報を引き出せるサービス',
       details: {
         background: '対話型AIサービスの新規立ち上げ。\nPoCから商用化を目指すフェーズ。',
@@ -33,6 +34,7 @@ export default function CaseStudies() {
       role: 'インフラ担当',
       tag: '決済基盤セキュリティ',
       period: '2021年3月 〜 2023年11月',
+      contractType: '業務委託',
       userValue: 'クレジットカード決済を安全に処理する決済代行サービス',
       details: {
         background: '決済代行サービスのインフラ刷新。\nセキュリティ基準厳格化への対応。',
@@ -59,6 +61,7 @@ export default function CaseStudies() {
       role: 'フルスタック',
       tag: 'SaaS改善・拡張',
       period: '2019年1月 〜 2021年2月',
+      contractType: '業務委託',
       userValue: '営業チームの案件管理を効率化するSFA（営業支援）ツール',
       details: {
         background: '成長中のSaaSにおける機能拡張と技術的負債の解消。',
@@ -115,6 +118,9 @@ export default function CaseStudies() {
               <p className="text-slate-600 text-sm mb-3">{proj.userValue}</p>
               <div className="flex flex-wrap items-center gap-3 mb-2">
                 <p className="text-slate-500 text-sm font-medium">{proj.role}</p>
+                <span className="text-xs text-emerald-700 bg-emerald-50 px-2 py-1 rounded border border-emerald-200 font-medium">
+                  {proj.contractType}
+                </span>
                 <span className="flex items-center text-xs text-slate-500 bg-slate-100 px-2 py-1 rounded">
                   <Calendar className="w-3 h-3 mr-1" />
                   {proj.period}
