@@ -16,6 +16,7 @@ type Video = {
   points: { title: string; detail: string }[]
   result: string
   videoLinks: VideoLink[]
+  hidden?: boolean // Set to true to temporarily hide
 }
 
 export default function VideoShowcase() {
@@ -78,9 +79,13 @@ export default function VideoShowcase() {
       result: '要件定義ヒアリング工数を大幅圧縮',
       videoLinks: [
         { label: '動画を見る', videoUrl: '/videos/StellaAI.mp4' }
-      ]
+      ],
+      hidden: true // Temporarily hidden
     }
   ]
+
+  // Filter out hidden videos
+  const visibleVideos = videos.filter(v => !v.hidden)
 
   return (
     <>
@@ -128,7 +133,7 @@ export default function VideoShowcase() {
           </div>
 
           <div className="grid gap-12">
-            {videos.map((video, idx) => (
+            {visibleVideos.map((video, idx) => (
               <div key={idx} className="bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
                 {/* Header */}
                 <div className="p-4 border-b border-slate-700 bg-slate-800">
