@@ -14,10 +14,10 @@ export default function CaseStudies() {
 
   const projects = [
     {
-      title: 'KAKUKAKU',
+      title: '株式会社SakanaAI',
       role: 'リードエンジニア',
       tag: 'AIプラットフォーム',
-      period: '2023年12月 〜 2025年11月',
+      period: '2023年11月 〜 2025年11月',
       contractType: '業務委託',
       userValue: '対話型AIで、ユーザーが素早く必要な情報を引き出せるサービス',
       images: [
@@ -45,10 +45,10 @@ export default function CaseStudies() {
       link: 'https://kakukaku.app/'
     },
     {
-      title: 'YTGATE',
+      title: '株式会社Sun*',
       role: 'インフラ担当',
       tag: '決済基盤セキュリティ',
-      period: '2021年3月 〜 2023年11月',
+      period: '2021年2月 〜 2023年10月',
       contractType: '業務委託',
       userValue: 'クレジットカード決済を安全に処理する決済代行サービス',
       images: [
@@ -78,7 +78,7 @@ export default function CaseStudies() {
       title: 'Mazrica (Senses)',
       role: 'フルスタック',
       tag: 'SaaS改善・拡張',
-      period: '2019年1月 〜 2021年2月',
+      period: '2018年12月 〜 2021年1月',
       contractType: '業務委託',
       userValue: '営業チームの案件管理を効率化するSFA（営業支援）ツール',
       images: [] as ProjectImage[],
