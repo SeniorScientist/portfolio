@@ -42,7 +42,7 @@ export default function CaseStudies() {
         usefulFor: 'AI活用プロダクト開発、検索システム設計、本番運用設計に活かせます。'
       },
       tech: ['Python', 'LangChain', 'AWS', 'RAG'],
-      link: 'https://kakukaku.app/'
+      link: 'https://sakana.ai/company-info/'
     },
     {
       title: '株式会社Sun*',
@@ -72,7 +72,7 @@ export default function CaseStudies() {
         usefulFor: 'セキュアなインフラ構築、決済システム、コンプライアンス対応に活かせます。'
       },
       tech: ['Terraform', 'AWS', 'Security', 'CI/CD'],
-      link: 'https://ytgate.jp/'
+      link: 'https://sun-asterisk.com/'
     },
     {
       title: 'Mazrica (Senses)',
@@ -167,7 +167,7 @@ export default function CaseStudies() {
                     ))}
                   </div>
                 )}
-                
+
                 {/* Responsibility Breakdown */}
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mt-3">
                   <p className="text-xs font-bold text-blue-700 mb-2">私の担当範囲：</p>
