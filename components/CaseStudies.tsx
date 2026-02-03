@@ -14,10 +14,10 @@ export default function CaseStudies() {
 
   const projects = [
     {
-      title: 'Revox',
+      title: '株式会社SakanaAI',
       role: 'リードエンジニア',
       tag: 'AIプラットフォーム',
-      period: '2023年6月 〜 2025年11月',
+      period: '2023年11月 〜 2025年11月',
       contractType: '業務委託',
       userValue: '対話型AIで、ユーザーが素早く必要な情報を引き出せるサービス',
       images: [
@@ -42,13 +42,13 @@ export default function CaseStudies() {
         usefulFor: 'AI活用プロダクト開発、検索システム設計、本番運用設計に活かせます。'
       },
       tech: ['Python', 'LangChain', 'AWS', 'RAG'],
-      link: 'https://www.re-vox.co.jp/'
+      link: 'https://kakukaku.app/'
     },
     {
-      title: 'C2C platform',
+      title: '株式会社Sun*',
       role: 'インフラ担当',
       tag: '決済基盤セキュリティ',
-      period: '2021年4月 〜 2023年5月',
+      period: '2021年2月 〜 2023年10月',
       contractType: '業務委託',
       userValue: 'クレジットカード決済を安全に処理する決済代行サービス',
       images: [
@@ -72,13 +72,13 @@ export default function CaseStudies() {
         usefulFor: 'セキュアなインフラ構築、決済システム、コンプライアンス対応に活かせます。'
       },
       tech: ['Terraform', 'AWS', 'Security', 'CI/CD'],
-      link: 'https://c2c-platform.com/'
+      link: 'https://ytgate.jp/'
     },
     {
-      title: 'Mazrica',
+      title: 'Mazrica (Senses)',
       role: 'フルスタック',
       tag: 'SaaS改善・拡張',
-      period: '2019年2月 〜 2021年2月',
+      period: '2018年12月 〜 2021年1月',
       contractType: '業務委託',
       userValue: '営業チームの案件管理を効率化するSFA（営業支援）ツール',
       images: [] as ProjectImage[],
@@ -167,7 +167,7 @@ export default function CaseStudies() {
                     ))}
                   </div>
                 )}
-
+                
                 {/* Responsibility Breakdown */}
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mt-3">
                   <p className="text-xs font-bold text-blue-700 mb-2">私の担当範囲：</p>
