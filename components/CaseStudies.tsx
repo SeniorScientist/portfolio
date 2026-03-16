@@ -14,92 +14,98 @@ export default function CaseStudies() {
 
   const projects = [
     {
-      title: '株式会社SakanaAI',
+      title: '株式会社KaKuKaKu',
       role: 'リードエンジニア',
       tag: 'AIプラットフォーム',
-      period: '2023年11月 〜 2025年11月',
+      period: '2023年12月 〜 2025年12月',
       contractType: '業務委託',
-      userValue: '対話型AIで、ユーザーが素早く必要な情報を引き出せるサービス',
+      userValue: 'CEOに近い距離で、対話型AIプラットフォームやAIを含むWebシステムを開発',
       images: [
         { label: 'インフラ構成図', src: '/images/kakukaku-infra-diagram.png' },
         { label: 'フローチャート', src: '/images/kakukaku-flowchart.png' }
       ] as ProjectImage[],
       details: {
-        background: '対話型AIサービスの新規立ち上げ。\nPoCから商用化を目指すフェーズ。',
+        background: '対話型AIサービスの新規立ち上げ。PoCから商用化を目指すフェーズ。\nCEOが顧客から持ち帰った要望に対し、開発できる形に整理するところから担当。',
         issues: [
-          'AIの回答精度が低く、ユーザー満足度が上がらない',
-          '運用コスト（トークン課金）の肥大化懸念'
+          'AIをどこに入れると意味があるか、逆に入れない方がいい部分の見極めが必要',
+          '精度・コスト・速度のバランス設計が未定義',
+          '要件が固まりきっていない状態からのスタート'
         ],
-        responsibilities: ['プロダクト設計', '技術選定', 'インフラ設計・構築', '実装', 'デプロイ', '監視・運用改善'],
+        responsibilities: ['要件整理・仕様化', 'プロダクト設計', '技術選定', 'インフラ設計・構築', '実装', 'デプロイ', '監視・運用改善'],
         solution: [
+          'まず背景とゴールを合わせ、DB・API・画面の責務分担を先に整理',
           '意味検索とキーワード検索の組み合わせで、検索精度を約30%向上',
-          'サーバレス構成で、待機コストをほぼゼロに削減',
-          '監視体制を構築し、障害検知時間を数分以内に短縮'
+          'サーバレス構成（CDK/Amplify）で、待機コストをほぼゼロに削減',
+          'AI案件は最初から完璧を狙わず、まず使える形で出してログを見ながら改善'
         ],
-        metrics: ['回答精度 約30%向上', '待機コスト ほぼゼロ', '障害検知 数分以内'],
-        result: '商用リリース達成。\n応答精度が向上し、ユーザー評価改善。\n安定稼働を維持中。',
-        learning: 'ユーザー体験に直結するレスポンス速度と精度のバランス。',
-        usefulFor: 'AI活用プロダクト開発、検索システム設計、本番運用設計に活かせます。'
+        metrics: ['回答精度 約30%向上', '待機コスト ほぼゼロ', 'PoCで終わらず本番リリース達成'],
+        result: '商用リリース達成。PoCで終わらず、本番運用まで持っていけた。\n応答精度が向上し、ユーザー評価改善。安定稼働を維持中。',
+        learning: '何を作るか、どう分けるか、どこを先にやるかを整理し、チームが動きやすい状態を作ることが最も重要。',
+        usefulFor: 'AI活用プロダクト開発、要件が不明瞭な0→1開発、検索システム設計に活かせます。'
       },
-      tech: ['Python', 'LangChain', 'AWS', 'RAG'],
-      link: 'https://sakana.ai/company-info/'
+      tech: ['Next.js', 'Go', 'Python', 'LangChain', 'OpenAI', 'Gemini', 'Elasticsearch', 'AWS CDK', 'Amplify', 'RAG'],
+      link: 'https://kakukaku.app/'
     },
     {
-      title: '株式会社Sun*',
-      role: 'インフラ担当',
+      title: '株式会社Ytgate',
+      role: 'バックエンド・インフラ担当',
       tag: '決済基盤セキュリティ',
-      period: '2021年2月 〜 2023年10月',
+      period: '2021年3月 〜 2023年11月',
       contractType: '業務委託',
-      userValue: 'クレジットカード決済を安全に処理する決済代行サービス',
+      userValue: '決済領域で、バックエンドとインフラを中心に、安全に動かせる形を意識して開発',
       images: [
         { label: 'インフラ構成図', src: '/images/ytgate-infra-diagram.png' }
       ] as ProjectImage[],
       details: {
-        background: '決済代行サービスのインフラ刷新。\nセキュリティ基準厳格化への対応。',
+        background: '決済代行サービスのバックエンド開発とインフラ刷新。\n安全性や安定運用が通常のWebサービスよりも格段に重要な案件。',
         issues: [
           'PCI DSS要件（カード業界のセキュリティ基準）への未対応',
-          '手動運用によるオペレーションミスのリスク'
+          '手動運用によるオペレーションミスのリスク',
+          '決済フローやセキュリティ要件の制約が強く、通常の感覚では後で問題になるリスク'
         ],
-        responsibilities: ['インフラ設計', '構築', 'バックエンド開発', '決済システム連携', 'セキュリティ実装', 'ドキュメント化'],
+        responsibilities: ['バックエンド開発（Java / Spring Boot）', 'インフラ設計・構築（AWS / Terraform）', '決済システム連携', 'セキュリティ設計・実装', 'ドキュメント化'],
         solution: [
-          'インフラを完全コード化し、環境構築時間を数日→数時間に短縮',
-          '不正アクセス防止と脆弱性検知の自動化を導入',
-          '操作権限を最小限にし、全操作ログを保全'
+          'どこまでをシステムで担保し、どこに制約があるかを整理してから設計に着手',
+          'Terraformで環境差分を減らし、構築時間を数日→数時間に短縮',
+          '全部を一気に解かず、守るべき条件を整理し、先に決めることと後で改善することを分離',
+          '日本側と海外側の間に入り、技術的な翻訳と優先度整理を実施'
         ],
         metrics: ['環境構築 数日→数時間', 'PCI DSS準拠達成', '監査対応コスト削減'],
-        result: 'PCI DSS準拠を達成。\n監査対応コストと運用負荷を削減。',
-        learning: 'ミッションクリティカルなシステムにおける「守り」の鉄則。',
-        usefulFor: 'セキュアなインフラ構築、決済システム、コンプライアンス対応に活かせます。'
+        result: 'PCI DSS準拠を達成。\n要件を安全に実装できる形に整理し、チームが止まらない進め方を確立。',
+        learning: 'ミッションクリティカルなシステムでは、守るべき条件を先に整理し、段階的に進めることが鉄則。',
+        usefulFor: 'セキュアなインフラ構築、決済システム、日本・海外混合チームでの開発に活かせます。'
       },
-      tech: ['Terraform', 'AWS', 'Security', 'CI/CD'],
-      link: 'https://sun-asterisk.com/'
+      tech: ['Java', 'Spring Boot', 'Terraform', 'AWS', 'Security', 'CI/CD'],
+      link: 'https://ytgate.jp/'
     },
     {
-      title: 'Mazrica (Senses)',
+      title: '株式会社Mazrica',
       role: 'フルスタック',
-      tag: 'SaaS改善・拡張',
-      period: '2018年12月 〜 2021年1月',
+      tag: 'SaaS継続開発・改善',
+      period: '2019年1月 〜 2021年2月',
       contractType: '業務委託',
-      userValue: '営業チームの案件管理を効率化するSFA（営業支援）ツール',
+      userValue: 'SaaSの継続開発の中で、フロント・API・インフラを横断して改善を推進',
       images: [] as ProjectImage[],
       details: {
-        background: '成長中のSaaSにおける機能拡張と技術的負債の解消。',
+        background: '営業支援SaaSの継続的な機能拡張と技術的負債の解消。\n新規開発だけでなく、既存プロダクトを今後も機能追加しやすい形に保つことが重要な案件。',
         issues: [
           'API複雑化による開発スピード低下',
-          '画面表示の遅延によるUX悪化'
+          '画面表示の遅延によるUX悪化',
+          '既存仕様や外部連携との整合性があり、簡単には変えられない制約'
         ],
-        responsibilities: ['API設計・実装', 'フロントエンド最適化', 'インフラ保守（AWS CDK）', 'パフォーマンス改善'],
+        responsibilities: ['API設計・実装（RoR / PHP / NestJS + Prisma）', 'フロントエンド開発（Next.js / TypeScript）', 'インフラ保守（AWS CDK）', 'パフォーマンス改善'],
         solution: [
-          '必要なデータだけを取得する仕組みで、通信量を約40%削減',
-          '画面描画を最適化し、表示速度を約2倍に改善',
-          'AWS CDKでインフラをコード管理し、運用効率を向上'
+          '「本当に必要な仕様は何か」「将来どこが変わりそうか」を先に確認してから設計',
+          'フロント・API・インフラの責務を整理し、手戻りが少ない形で実装',
+          'GraphQLで必要なデータだけを取得する仕組みにし、通信量を約40%削減',
+          '全部を理想形に変えず、今の運用を崩さずにどこまで改善できるかを段階的に実施'
         ],
         metrics: ['通信量 約40%削減', '表示速度 約2倍', 'インフラ運用の効率化'],
-        result: '画面表示速度が向上。\nユーザー体感ストレスを軽減。',
-        learning: '稼働中プロダクトにおける、安全かつ段階的な改善手法。',
-        usefulFor: 'SaaS開発、API設計、パフォーマンス改善、スケール対応に活かせます。'
+        result: '画面表示速度が向上し、ユーザー体感ストレスを軽減。\n横断的に見て判断し、フロントだけ・バックエンドだけでは見えにくいところをつないで整理。',
+        learning: '稼働中プロダクトでは、今の運用を崩さず段階的に改善する進め方が最も効果的。',
+        usefulFor: 'BtoB SaaS開発、既存プロダクトの改善、API設計、スケール対応に活かせます。'
       },
-      tech: ['TypeScript', 'React', 'GraphQL', 'Rails'],
+      tech: ['TypeScript', 'React', 'Next.js', 'Ruby on Rails', 'PHP', 'NestJS', 'Prisma', 'GraphQL', 'AWS CDK'],
       link: 'https://pages-senses.mazrica.com/glisting-senses'
     }
   ]
@@ -119,7 +125,7 @@ export default function CaseStudies() {
             </div>
             プロジェクト・ケーススタディ
           </h2>
-          <p className="text-slate-600">「どう考え、どう進めたか」の記録</p>
+          <p className="text-slate-600">何を作ったかだけでなく、どういうチームで、どういう役割で、どう進めたか</p>
         </div>
 
         <div className="grid gap-12">

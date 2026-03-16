@@ -13,14 +13,14 @@ export default function Hero() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center space-x-2 bg-blue-900/50 px-3 py-1 rounded-full border border-blue-700 mb-6">
             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-            <span className="text-sm font-medium text-blue-100">AIエンジニア / テックリード</span>
+            <span className="text-sm font-medium text-blue-100">フルスタックエンジニア / テックリード</span>
           </div>
 
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 leading-relaxed">
-            生成AIをPoCで終わらせず、<br />
-            本番運用まで確実に実装・安定化できるエンジニアです。<br />
+            AIも含めて、複雑な要求を<br />
+            実運用できるプロダクトに落とし込むエンジニアです。<br />
             <span className="text-blue-400 text-xl md:text-2xl mt-4 block font-medium">
-              AIプラットフォーム、SaaS開発、<br className="md:hidden" />PCI DSS対応の実務経験があります。
+              曖昧な要求を整理し、設計・実装・運用まで一貫して担当します。
             </span>
           </h1>
 
@@ -29,15 +29,15 @@ export default function Hero() {
             <ul className="space-y-3 text-slate-200 font-medium">
               <li className="flex items-center">
                 <MessageCircle className="w-5 h-5 text-blue-400 mr-3" />
-                AI×業務改善システム全体の設計
+                要件整理から設計・実装・運用改善までの一貫した進め方
               </li>
               <li className="flex items-center">
                 <Shield className="w-5 h-5 text-blue-400 mr-3" />
-                堅牢なAWSインフラ / PCI DSS
+                フロント / バックエンド / インフラを横断した開発経験
               </li>
               <li className="flex items-center">
                 <Rocket className="w-5 h-5 text-blue-400 mr-3" />
-                プロダクト開発〜運用の自走経験
+                生成AI・決済基盤・SaaS開発の実務経験
               </li>
             </ul>
           </div>

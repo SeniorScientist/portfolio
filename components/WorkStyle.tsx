@@ -1,30 +1,30 @@
-import { Briefcase, Handshake, Target, Clock, AlertTriangle, TestTube, Shield, MessageSquare } from 'lucide-react'
+import { Briefcase, Handshake, Target, Clock, AlertTriangle, TestTube, Shield, MessageSquare, Users } from 'lucide-react'
 
 export default function WorkStyle() {
   const values = [
     {
       icon: Target,
-      title: '目的の共有',
-      shortDesc: '最初にゴールを合わせてズレを防ぐ',
-      desc: '「何のために、どこまでやるか」を最初に握ります。\n認識のズレを防ぎ、無駄な手戻りをなくします。'
+      title: '背景とゴールの共有',
+      shortDesc: '最初に背景とゴールを合わせる',
+      desc: 'まず背景とゴールを合わせて、そのあと実装単位に分けて話します。\nBiz/PMとは「何を実現したいか」を、エンジニア同士では「責務」と「未確定事項」を明確にします。'
     },
     {
       icon: Clock,
       title: '短いスパンで進捗',
       shortDesc: '2〜3日で報告、価値を早く示す',
-      desc: '1週間待たせません。\n2〜3日で現状を見せます。\n早い段階でのフィードバックを歓迎します。'
+      desc: '1週間待たせません。\n2〜3日で現状を見せます。\n図や簡単なメモで早めに認識を合わせることを重視しています。'
     },
     {
       icon: AlertTriangle,
       title: 'リスクの早期報告',
-      shortDesc: '悪い情報ほど早く共有',
-      desc: '「間に合わないかも」「技術的に難しい」\nそういった悪い情報ほど、隠さずに早く伝えて相談します。'
+      shortDesc: '詰まりや判断が必要な点を早めに共有',
+      desc: 'Slackと定例で、詰まっているところや判断が必要なところを早めに共有。\n曖昧なまま実装に入らないようにしています。'
     },
     {
       icon: TestTube,
-      title: 'テストと監視の初期設計',
-      shortDesc: '作る前に運用を考える',
-      desc: '作る前に考えます。\n「どうテストするか」「どう監視するか」\nリリース後の運用負荷を下げます。'
+      title: '要件の整理と分離',
+      shortDesc: '先に決めることと後で改善することを分ける',
+      desc: '何を先に決めるべきか、どこまでをシステムで持つか、どこを運用で吸収するかを整理。\n全部を一気に解かず、段階的に進めます。'
     },
     {
       icon: Shield,
@@ -35,10 +35,11 @@ export default function WorkStyle() {
   ]
 
   const communicationDetails = [
-    '毎週必ず進捗＋課題を共有',
-    '障害発生時の即応手順を明確化',
-    '変更時は影響範囲を事前説明',
-    'ドキュメントは常に最新化'
+    'Biz/PMとは「何を実現したいか」を合わせる',
+    'エンジニアとは「責務」「未確定事項」を明確に',
+    '口頭だけで終わらず、Slackやチケットに要点を残す',
+    '日本語での要件整理・仕様すり合わせに対応',
+    '海外メンバーには英語で対応、判断理由は文章に残す'
   ]
 
   return (
@@ -50,7 +51,7 @@ export default function WorkStyle() {
           </div>
           仕事の進め方
         </h2>
-        <p className="text-slate-600">日本のチームで働く上で、徹底していること</p>
+        <p className="text-slate-600">背景とゴールを合わせ、実装単位に分けて進める</p>
       </div>
 
       {/* Summary Box for Quick Scan - CEO/CTO向け */}
@@ -112,9 +113,9 @@ export default function WorkStyle() {
               <Handshake className="text-slate-500 w-8 h-8" />
             </div>
             <p className="text-sm text-slate-700 font-medium">
-              安心感を持って<br />
-              任せていただけるよう、<br />
-              <span className="text-[var(--accent-color)]">丁寧な対話</span>を心がけています。
+              認識差分を埋めながら<br />
+              進めるのが得意です。<br />
+              <span className="text-[var(--accent-color)]">丁寧な要件整理と対話</span>を<br />心がけています。
             </p>
           </div>
         </div>

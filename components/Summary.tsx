@@ -2,9 +2,9 @@ import { FileText, Check } from 'lucide-react'
 
 export default function Summary() {
   const mainAchievements = [
-    '生成AI × 業務システムで、本番運用に成功',
-    '堅牢なAWSインフラ設計（PCI DSS準拠）',
-    'プロダクトの安定運用と継続改善'
+    '曖昧な要求を整理し、実運用できるプロダクトとして形にする',
+    'フロント・バックエンド・インフラを横断して一貫対応',
+    '生成AIを含む案件をPoCで終わらせず本番リリースまで完遂'
   ]
 
   return (
@@ -25,16 +25,17 @@ export default function Summary() {
           <div>
             <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 border-b border-slate-100 pb-1">■ 私は何ができるか</h3>
             <p className="text-xl font-bold text-slate-900 leading-relaxed mb-2">
-              生成AIをPoCで終わらせず、本番運用まで確実に実装・安定化できるエンジニアです。
+              AIも含めて、複雑な要求を実運用できるプロダクトに落とし込むエンジニアです。
             </p>
             <p className="text-slate-700">
-              AWSインフラとセキュリティ設計（PCI DSS準拠）も対応できます。
+              要件整理から設計、実装、テスト、リリース、運用改善まで一貫して担当。<br />
+              フロント、バックエンド、インフラを横断し、必要に応じてBiz/PMとの仕様すり合わせも行います。
             </p>
           </div>
 
           {/* Main Achievements - Running Value */}
           <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-5">
-            <h3 className="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-3">◆ 主な成果（3つ）</h3>
+            <h3 className="text-sm font-bold text-emerald-700 uppercase tracking-wider mb-3">◆ 主な強み（3つ）</h3>
             <ul className="space-y-2">
               {mainAchievements.map((achievement, idx) => (
                 <li key={idx} className="flex items-center">
@@ -48,27 +49,27 @@ export default function Summary() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Achievements */}
             <div>
-              <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 border-b border-slate-100 pb-1">■ 強い実績</h3>
+              <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 border-b border-slate-100 pb-1">■ 代表的な実績</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="font-bold text-[var(--accent-color)] mr-2">1)</span>
                   <div>
-                    <span className="font-bold text-slate-800">対話AIプラットフォーム</span>
-                    <span className="text-sm text-slate-600 block">設計〜運用まで一貫してリード</span>
+                    <span className="font-bold text-slate-800">対話型AIプラットフォーム</span>
+                    <span className="text-sm text-slate-600 block">CEOに近い距離で、要件整理から本番リリースまで広く担当</span>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="font-bold text-[var(--accent-color)] mr-2">2)</span>
                   <div>
                     <span className="font-bold text-slate-800">決済基盤セキュリティ</span>
-                    <span className="text-sm text-slate-600 block">PCI DSS準拠の安全性設計</span>
+                    <span className="text-sm text-slate-600 block">バックエンドとインフラを中心に、安全に動かせる形を設計</span>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="font-bold text-[var(--accent-color)] mr-2">3)</span>
                   <div>
                     <span className="font-bold text-slate-800">営業支援SaaS</span>
-                    <span className="text-sm text-slate-600 block">API刷新・フロント改善・運用安定化</span>
+                    <span className="text-sm text-slate-600 block">フロント・API・インフラを横断して継続的に改善</span>
                   </div>
                 </li>
               </ul>
@@ -81,7 +82,11 @@ export default function Summary() {
                 <ul className="space-y-2">
                   <li className="flex items-center text-slate-800 font-medium">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
-                    AI活用・検索精度の改善
+                    要件が曖昧な0→1の立ち上げ
+                  </li>
+                  <li className="flex items-center text-slate-800 font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
+                    生成AI活用プロダクトの設計・運用
                   </li>
                   <li className="flex items-center text-slate-800 font-medium">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
@@ -89,19 +94,20 @@ export default function Summary() {
                   </li>
                   <li className="flex items-center text-slate-800 font-medium">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
-                    新規プロダクトの0→1立ち上げ
+                    既存SaaSの継続開発・改善
                   </li>
                   <li className="flex items-center text-slate-800 font-medium">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-color)] mr-2"></span>
-                    API設計・スケール対応
+                    日本・海外混合チームでの開発
                   </li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 border-b border-slate-100 pb-1">■ 働き方</h3>
                 <p className="text-slate-800 font-medium">
-                  最後まで責任を持ち、<br />
-                  期限と品質を両立させます。
+                  背景とゴールを最初に合わせ、<br />
+                  実装単位に分けて進めます。<br />
+                  最後まで責任を持ち、期限と品質を両立させます。
                 </p>
               </div>
             </div>

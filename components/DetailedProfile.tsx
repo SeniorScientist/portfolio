@@ -1,4 +1,4 @@
-import { Terminal, Cpu, Cloud } from 'lucide-react'
+import { Terminal, Cpu, Cloud, Settings } from 'lucide-react'
 
 export default function DetailedProfile() {
   return (
@@ -18,15 +18,25 @@ export default function DetailedProfile() {
           {/* Core Competence */}
           <div className="bg-white rounded-xl p-8 shadow-sm">
             <h3 className="text-xl font-bold mb-6 border-b pb-2">コアコンピタンス</h3>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h4 className="font-bold text-slate-800 mb-3 flex items-center">
+                  <Settings className="mr-2 text-blue-600 w-5 h-5" />
+                  要件整理 → 設計 → 運用
+                </h4>
+                <p className="text-slate-600 text-sm mb-4">
+                  曖昧な要求を整理し、何を先に決めるべきか、どこまでをシステムで持ち、どこを運用で吸収するかを設計。
+                  要件整理から実装、テスト、リリース、運用改善まで一貫して担当。
+                </p>
+              </div>
               <div>
                 <h4 className="font-bold text-slate-800 mb-3 flex items-center">
                   <Cpu className="mr-2 text-blue-600 w-5 h-5" />
                   生成AI / LLM エンジニアリング
                 </h4>
                 <p className="text-slate-600 text-sm mb-4">
-                  GPT-4, Claude 3, Gemini 等のモデル特性を理解し、LangChainや独自スクリプトで制御。
-                  RAG構築における検索精度向上（Hybrid Search, Re-ranking）や、AIエージェントの自律動作設計に強み。
+                  GPT-4, Claude, Gemini 等のモデル特性を理解し、LangChainや独自スクリプトで制御。
+                  AIを入れるべき場所と入れない方がいい部分を見極め、精度・コスト・速度のバランスを設計。
                 </p>
               </div>
               <div>
@@ -36,7 +46,8 @@ export default function DetailedProfile() {
                 </h4>
                 <p className="text-slate-600 text-sm mb-4">
                   AWS（CDK/Terraform）を用いたIaCを徹底。
-                  サーバレス（Lambda/Fargate）を基本とし、スケーラビリティと運用コストを最適化したアーキテクチャを構築。
+                  サーバレス構成を基本とし、スケーラビリティと運用コストを最適化。
+                  決済基盤ではPCI DSS準拠のセキュリティ設計も担当。
                 </p>
               </div>
             </div>
